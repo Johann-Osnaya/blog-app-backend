@@ -73,4 +73,4 @@ blogsRouter.put('/:id', async (request, response) => {
 	response.json(updatedBlog)
 })
 
-module.exports = function(app, another) {blogsRouter}
+module.exports = blogsRouter
