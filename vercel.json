@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "rewrites": [
+        { "source": "/api/blogs", "destination": "/api/blogs.js" },
+        { "source": "/api/users", "destination": "/api/users.js" },
+        { "source": "/api/login", "destination": "/api/login.js" },
+        { "source": "/api/testing", "destination": "/api/testing.js" }
+    ]
+    }
+    
