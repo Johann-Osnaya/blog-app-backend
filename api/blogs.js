@@ -6,7 +6,7 @@ const { TokenExtractor } = require('../utils/middleware')
 const userExtractor = require('../utils/middleware').userExtractor
 
 
-module.exports = function(param1, param2) {
+module.exports = function() {
 	blogsRouter.get('/', async (request, response) => {
 		const blogs = await Blog
 			.find({}).populate('user', { username: 1, name: 1 })
