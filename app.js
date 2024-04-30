@@ -2,9 +2,9 @@ const express = require('express')
 const app = express()
 require('express-async-errors')
 const cors = require('cors')
-const blogsRouter = require('../api/blogs')
-const usersRouter = require('../api/users')
-const loginRouter = require('../api/login')
+const blogsRouter = require('./controllers/blogs')
+const usersRouter = require('./controllers/users')
+const loginRouter = require('./controllers/login')
 const mongoose = require('mongoose')
 const config = require('./utils/config')
 const logger = require('./utils/logger')
@@ -28,11 +28,9 @@ app.use('/api/users', usersRouter)
 app.use('/api/blogs' ,blogsRouter)
 
 if (process.env.NODE_ENV === 'test') {
-	const testingRouter = require('../api/testing')
+	const testingRouter = require('./controllers/testing')
 	app.use('/api/testing', testingRouter)
 }
 
 app.use(middleware.errorHandler)
-
-
 module.exports = app
