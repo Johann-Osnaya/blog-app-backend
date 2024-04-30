@@ -28,7 +28,7 @@ app.use('/api/users', usersRouter)
 app.use('/api/blogs' ,blogsRouter)
 
 if (process.env.NODE_ENV === 'test') {
-	const testingRouter = require('./controllers/testing')
+	const testingRouter = require('./api/testing')
 	app.use('/api/testing', testingRouter)
 }
 
