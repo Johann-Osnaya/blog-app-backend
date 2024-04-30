@@ -25,7 +25,7 @@ app.use(middleware.TokenExtractor)
 app.use(middleware.requestLogger)
 app.use('/api/login', loginRouter)
 app.use('/api/users', usersRouter)
-app.use('/api/blogs' ,blogsRouter)
+app.use('/api/blogs' ,blogsRouter(null,null))
 
 if (process.env.NODE_ENV === 'test') {
 	const testingRouter = require('./api/testing')
