@@ -5,7 +5,7 @@
         { "source": "/api/users", "destination": "/api/users.js" },
         { "source": "/api/login", "destination": "/api/login.js" },
         { "source": "/api/testing", "destination": "/api/testing.js" },
-        {"source": "/", "destination": "/index.js"}
+        {"source": "/(.*)", "destination": "/app.js"}
     ]
     }
     
