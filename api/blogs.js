@@ -1,4 +1,5 @@
-const blogsRouter = require('express').Router()
+const express = require('express')
+const blogsRouter = express.Router()
 const Blog = require('../models/blog')
 const User = require('../models/user')
 const { TokenExtractor } = require('../utils/middleware')
